@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MFA Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .mfa-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <div class="mfa-container">
+        <h2>MFA Verification</h2>
+        <form action="/verify-mfa" method="POST">
+            <div class="form-group">
+                <label for="mfaCode">Enter MFA Code</label>
+                <input type="text" id="mfaCode" name="mfaCode" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Verify">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
